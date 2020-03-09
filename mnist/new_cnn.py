@@ -94,7 +94,7 @@ net.fit_generator(train_generator,epochs = epochs, validation_data = (X_val,Y_va
                               verbose = 1, steps_per_epoch=X_train.shape[0] // batch_size
                               , callbacks=[learning_rate_reduction])          
 
-net.save("all_total_net.h5")
+net.save("CNN_model_mnist.h5")
 
 outputs=net.predict(mnist_x_test)
 labels_predicted=np.argmax(outputs, axis=1)
